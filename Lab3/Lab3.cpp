@@ -35,6 +35,7 @@ std::ostream& operator <<(std::ostream& os, const Points<T>& p)
 
 void choose_type()
 {
+	std::cout << "HAPPY NEW YEAR:)\n\n";
 	std::cout << "Choose the type of data you need:\n\n";
 	std::cout << "1. int\n";
 	std::cout << "2. float\n";
@@ -756,6 +757,7 @@ std::ostream& operator <<(std::ostream& os, const std::complex<S>& c)
 }
 
 //----------------------------------------------------------
+
 
 
 int main()
