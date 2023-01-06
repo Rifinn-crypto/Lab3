@@ -32,7 +32,7 @@ std::ostream& operator <<(std::ostream& os, const Points<T>& p)
 	return os << "(" << p.x << ", " << p.y << ")";
 }
 
-//Menu for selecting data type
+
 void choose_type()
 {
 	std::cout << "Choose the type of data you need:\n\n";
@@ -44,7 +44,7 @@ void choose_type()
 	std::cout << "\nEnter the number: ";
 }
 
-//Main menu
+
 void menu()
 {
 	std::cout << "1. Create a line\n";
@@ -172,7 +172,7 @@ void operator +=(const Points<T>& p, PolyLine<T>& obj)
 	obj.n = obj.n++;
 }
 
-//Vertex Output Operator Overload
+
 template<typename T>
 std::ostream& operator <<(std::ostream& os, const PolyLine<T>& obj)
 {
@@ -209,7 +209,7 @@ bool PolyLine<T>::operator ==(const PolyLine<T>& obj)
 template<typename T>
 Points<T>& PolyLine<T>:: operator [](const int i)
 {
-	//data.at(i);
+	
 	if (i < n) return data[i];
 	else throw "Error! Attempt to access by case index.\n\n";
 }
@@ -224,7 +224,7 @@ int PolyLine<T>::get_n() const { return n; }
 
 //----------------------------------------------------------
 
-//Create a polyline
+
 template<typename T>
 void create_polyline(PolyLine<T>* mas_obj, int* count)
 {
@@ -250,7 +250,7 @@ void create_polyline(PolyLine<T>* mas_obj, int* count)
 	*count += 1;
 }
 
-//Displaying polyline vertices
+
 template<typename T>
 void output_vertices(PolyLine<T>* mas_obj, int count)
 {
@@ -270,7 +270,7 @@ void output_vertices(PolyLine<T>* mas_obj, int count)
 	system("pause");
 }
 
-//Getting the length of a polyline
+
 template<typename T>
 void len_poly(PolyLine<T>* mas_obj, int count)
 {
@@ -288,7 +288,7 @@ void len_poly(PolyLine<T>* mas_obj, int count)
 	system("pause");
 }
 
-//Adding a vertex to the beginning of a polyline
+
 template<typename T>
 void ver_beg(PolyLine<T>* mas_obj, int count)
 {
@@ -310,7 +310,7 @@ void ver_beg(PolyLine<T>* mas_obj, int count)
 	p += mas_obj[n];
 }
 
-//Adding a vertex to the end of a polyline
+
 template<typename T>
 void ver_back(PolyLine<T>* mas_obj, int count)
 {
@@ -332,7 +332,7 @@ void ver_back(PolyLine<T>* mas_obj, int count)
 	mas_obj[n] += p;
 }
 
-//Creating a new polyline obtained by joining two other polylines
+
 template<typename T>
 void sum_ver(PolyLine<T>* mas_obj, int* count)
 {
@@ -355,7 +355,7 @@ void sum_ver(PolyLine<T>* mas_obj, int* count)
 	*count += 1;
 }
 
-//Task
+
 template<typename T>
 void add_task(PolyLine<T>* mas_obj, int* count)
 {
@@ -391,7 +391,7 @@ void add_task(PolyLine<T>* mas_obj, int* count)
 }
 
 
-//Rewrites the vertex
+
 template<typename T>
 void rewrite_vertex(PolyLine<T>* mas_obj, int count)
 {
@@ -417,7 +417,7 @@ void rewrite_vertex(PolyLine<T>* mas_obj, int count)
 	std::cin >> mas_obj[n][m].y;
 }
 
-//Displays the vertex of the polyline
+
 template<typename T>
 void input_vertex(PolyLine<T>* mas_obj, int count)
 {
@@ -466,7 +466,7 @@ void compare_broken(PolyLine<T>* mas_obj, int count)
 
 //---------------------------------------------------------
 
-//Create a polyline (for std::complex<>)
+
 template<typename S>
 void create_polyline(PolyLine<std::complex<S>>* mas_obj, int* count)
 {
@@ -511,7 +511,7 @@ void create_polyline(PolyLine<std::complex<S>>* mas_obj, int* count)
 	*count += 1;
 }
 
-//Rewrites the vertex(for std::complex<>)
+
 template<typename S>
 void rewrite_vertex(PolyLine<std::complex<S>>* mas_obj, int count)
 {
@@ -555,7 +555,7 @@ void rewrite_vertex(PolyLine<std::complex<S>>* mas_obj, int count)
 
 }
 
-//Adding a vertex to the beginning of a polyline (for std::complex<>)
+
 template<typename S>
 void ver_beg(PolyLine<std::complex<S>>* mas_obj, int count)
 {
@@ -594,7 +594,7 @@ void ver_beg(PolyLine<std::complex<S>>* mas_obj, int count)
 	p += mas_obj[n];
 }
 
-//Adding a vertex to the end of a polyline (for std::complex)
+
 template<typename S>
 void ver_back(PolyLine<std::complex<S>>* mas_obj, int count)
 {
@@ -633,7 +633,7 @@ void ver_back(PolyLine<std::complex<S>>* mas_obj, int count)
 	mas_obj[n] += p;
 }
 
-//Getting the length of a polyline(for std::complex<>)
+
 template<typename S>
 void len_poly(PolyLine<std::complex<S>>* mas_obj, int count)
 {
@@ -651,7 +651,7 @@ void len_poly(PolyLine<std::complex<S>>* mas_obj, int count)
 	system("pause");
 }
 
-///Ñîçäàòü ëîìàííóþ ïðàâèëüíûé ìíîãîóãîëüíèê (std::complex)
+
 template<typename S>
 void add_task(PolyLine<std::complex<S>>* mas_obj, int* count)
 {
@@ -694,7 +694,7 @@ void add_task(PolyLine<std::complex<S>>* mas_obj, int* count)
 }
 //---------------------------------------------------------
 
-//Precision change
+
 template<typename T>
 void change_precision()
 {
@@ -708,7 +708,7 @@ void change_precision()
 	p._lambda() = n;
 }
 
-//Equality comparison operator
+
 template<typename T>
 bool operator==(Points<T>& p1, Points<T>& p2)
 {
@@ -717,7 +717,7 @@ bool operator==(Points<T>& p1, Points<T>& p2)
 	return true;
 }
 
-//Comparison operator for inequality
+
 template<typename T>
 bool operator!=(Points<T>& p1, Points<T>& p2)
 {
@@ -726,7 +726,7 @@ bool operator!=(Points<T>& p1, Points<T>& p2)
 	return true;
 }
 
-//Equality comparison operator(for std::complex<>)
+
 template<typename S>
 bool operator==(Points<std::complex<S>>& p1, Points<std::complex<S>>& p2)
 {
@@ -737,7 +737,7 @@ bool operator==(Points<std::complex<S>>& p1, Points<std::complex<S>>& p2)
 	return true;
 }
 
-//Comparison operator for inequality(for std::complex<>)
+
 template<typename S>
 bool operator!=(Points<std::complex<S>>& p1, Points<std::complex<S>>& p2)
 {
@@ -748,7 +748,7 @@ bool operator!=(Points<std::complex<S>>& p1, Points<std::complex<S>>& p2)
 	return true;
 }
 
-//Complex number output operator overload
+
 template<typename S>
 std::ostream& operator <<(std::ostream& os, const std::complex<S>& c)
 {
@@ -757,7 +757,7 @@ std::ostream& operator <<(std::ostream& os, const std::complex<S>& c)
 
 //----------------------------------------------------------
 
-//Main function
+
 int main()
 {
 	int n = 0;
