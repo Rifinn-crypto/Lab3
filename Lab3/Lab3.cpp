@@ -190,7 +190,7 @@ std::ostream& operator <<(std::ostream& os, const PolyLine<T>& obj)
 template<typename T>
 bool PolyLine<T>::operator !=(const PolyLine<T>& obj)
 {
-	if (n != obj.n) throw "\n\nThe broken lines are incomparable, due to the different number of vertices.\n\n";
+	if (n != obj.n) throw "\n\nThe Polyline are incomparable, due to the different number of vertices.\n\n";
 
 	return !(*this == obj);
 }
@@ -198,7 +198,7 @@ bool PolyLine<T>::operator !=(const PolyLine<T>& obj)
 template<typename T>
 bool PolyLine<T>::operator ==(const PolyLine<T>& obj)
 {
-	if (n != obj.n) throw "\n\nThe broken lines are incomparable, due to the different number of vertices.\n\n";
+	if (n != obj.n) throw "\n\nThe Polylines are incomparable, due to the different number of vertices.\n\n";
 
 	int index = 0;
 
@@ -321,7 +321,7 @@ void ver_back(PolyLine<T>* mas_obj, int count)
 	std::cout << "\n";
 	do
 	{
-		std::cout << "In which polyline do I need to add a vertex to the beginning?(counting from zero): ";
+		std::cout << "In which polyline do I need to add a vertex to the end?(counting from zero): ";
 		std::cin >> n;
 	} while (n < 0 || n >= count);
 
@@ -923,5 +923,5 @@ int main()
 		}
 	}
 
-	else std::cout << "\n\nPlease enter the correct number next time.\n\n";
+	else std::cout << "\n\nPlease enter the correct number.\n\n";
 }
